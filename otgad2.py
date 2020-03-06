@@ -1,8 +1,6 @@
 import numpy as np
-import random
 from random import randint
-def random_finder(num_itterations=1000):
-    number = random.randint(1,100)
+def random_finder(number=1):
     computer_number = 50
     tries = 1
     low = 1
@@ -13,12 +11,12 @@ def random_finder(num_itterations=1000):
             high = computer_number    # Задаем загаданное число верхней границей интервала
     # Продолжаем делить полученный интервал наполовину.
             computer_number = computer_number - ((high-low)//2)
-            print(computer_number)
-        elif computer_number < number:
+            elif computer_number < number:
             low = computer_number    # Задаем загаданное число нижней границей интервала
             computer_number = computer_number + ((high-low)//2)
-            print(computer_number)
             tries += 1
+        break
+    return tries
 
     print("Компьютер потратил", tries, "попытки(ок) на отгадывание числа.")
 
