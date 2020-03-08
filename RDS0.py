@@ -14,8 +14,7 @@ def random_finder(number, predict = 50, tries = 1):
             range[1] = predict    # Задаем загаданное число верхней границей интервала
             predict = int((predict + range[0]) / 2)
     return tries
-    print("Компьютер потратил", tries, "попытки(ок) на отгадывание числа.")
-    
+        
 def score_game(random_finder):
     '''Запускаем игру 1000 раз, чтоб узнать как быстро игра угадывает число'''
     count_ls = []
